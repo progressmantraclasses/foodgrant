@@ -5,6 +5,9 @@ const mongoose = require("mongoose");
 const cloudinary = require("cloudinary").v2;
 const multer = require("multer");
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
+const ngoRoutes = require("./routes/ngoRoutes");
+const businessRoutes = require("./routes/businessRoutes");
+const farmerRoutes = require("./routes/farmerRoutes");
 
 dotenv.config();
 
@@ -38,6 +41,11 @@ app.post("/api/upload", upload.single("image"), (req, res) => {
   }
   res.json({ imageUrl: req.file.path });
 });
+
+// ✅ API Routes
+app.use("/api/ngos", ngoRoutes);
+app.use("/api/businesses", businessRoutes);
+app.use("/api/farmers", farmerRoutes);
 
 // ✅ **MongoDB Connection**
 mongoose
