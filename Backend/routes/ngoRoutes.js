@@ -1,29 +1,45 @@
 const express = require("express");
+const router = express.Router();
 const Ngo = require("../models/Ngo");
 
-const router = express.Router();
-
-// Create NGO
+// Create
 router.post("/", async (req, res) => {
   try {
-    const newNgo = new Ngo(req.body);
-    await newNgo.save();
-    res.status(201).json({ message: "NGO Registered Successfully!", ngo: newNgo });
+    const newNgo = await Ngo.create(req.body);
+    res.status(201).json(newNgo);
   } catch (error) {
-    res.status(500).json({ error: "Error registering NGO" });
+    res.status(400).json({ error: error.message });
   }
 });
 
-// Fetch NGOs
+// Read (Fetch all NGOs)
 router.get("/", async (req, res) => {
-  const ngos = await Ngo.find();
-  res.json(ngos);
+  try {
+    const ngos = await Ngo.find();
+    res.json(ngos);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 
-// Delete NGO
+// Update
+router.put("/:id", async (req, res) => {
+  try {
+    const updatedNgo = await Ngo.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.json(updatedNgo);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Delete
 router.delete("/:id", async (req, res) => {
-  await Ngo.findByIdAndDelete(req.params.id);
-  res.json({ message: "NGO Deleted Successfully!" });
+  try {
+    await Ngo.findByIdAndDelete(req.params.id);
+    res.json({ message: "NGO deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 
 module.exports = router;

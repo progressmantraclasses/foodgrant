@@ -1,5 +1,5 @@
 import React from "react";
-import { FaUtensils, FaRecycle, FaTruck, FaChartLine, FaShieldAlt, FaUsers, FaClock, FaMapMarkedAlt, FaHandsHelping, FaBuilding, FaSeedling } from "react-icons/fa";
+import { FaSeedling, FaUtensils, FaHandsHelping, FaRecycle, FaTruck, FaChartLine, FaShieldAlt, FaUsers, FaClock, FaMapMarkedAlt, FaEnvelope, FaPhone, FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaGlobe, FaInfoCircle, FaArrowRight, FaBuilding } from "react-icons/fa";
 
 const Header = () => (
   <header className="bg-green-600 fixed w-full z-50 shadow-lg">
@@ -74,9 +74,30 @@ const FeaturesSection = () => (
 );
 
 const Footer = () => (
-  <footer className="bg-green-700 text-white py-6 text-center">
-    <p>&copy; 2025 FoodGrant | All Rights Reserved</p>
-  </footer>
+   <footer className="bg-gradient-to-r from-green-700 to-green-500 text-white py-10">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+        <div>
+          <h3 className="text-xl font-bold flex items-center justify-center md:justify-start"><FaInfoCircle className="mr-2" /> About FoodGrant</h3>
+          <p className="mt-2 text-sm">We aim to reduce food waste by connecting donors, NGOs, and businesses to ensure surplus food reaches those in need. Our platform promotes sustainability and food security worldwide.</p>
+        </div>
+        <div>
+          <h3 className="text-xl font-bold flex items-center justify-center md:justify-start"><FaEnvelope className="mr-2" /> Contact Us</h3>
+          <p className="mt-2 flex items-center justify-center md:justify-start"><FaEnvelope className="mr-2" /> contact@foodgrant.com</p>
+          <p className="mt-2 flex items-center justify-center md:justify-start"><FaPhone className="mr-2" /> +1 234 567 890</p>
+          <p className="mt-2 flex items-center justify-center md:justify-start"><FaGlobe className="mr-2" /> www.foodgrant.com</p>
+        </div>
+        <div>
+          <h3 className="text-xl font-bold flex items-center justify-center md:justify-start"><FaUsers className="mr-2" /> Follow Us</h3>
+          <div className="flex justify-center md:justify-start space-x-4 mt-2">
+            <a href="#" className="hover:text-gray-300"><FaFacebook size={24} /></a>
+            <a href="#" className="hover:text-gray-300"><FaTwitter size={24} /></a>
+            <a href="#" className="hover:text-gray-300"><FaInstagram size={24} /></a>
+            <a href="#" className="hover:text-gray-300"><FaLinkedin size={24} /></a>
+          </div>
+        </div>
+      </div>
+      <div className="text-center mt-6 text-sm border-t border-gray-400 pt-4">&copy; 2025 FoodGrant | All Rights Reserved | <a href="#" className="underline">Privacy Policy</a> | <a href="#" className="underline">Terms of Service</a></div>
+    </footer>
 );
 
 const Home = () => (
