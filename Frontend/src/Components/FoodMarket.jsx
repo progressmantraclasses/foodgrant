@@ -27,11 +27,12 @@ const FoodMarket = () => {
     <div className="container mx-auto flex justify-between items-center py-4 px-6">
       <h1 className="text-white text-2xl font-bold">FoodGrant</h1>
       <nav className="hidden md:flex space-x-6 text-white">
-        <a href="/">Home</a>
-        <a href="/features">Features</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#impact">Impact</a>
-        <a href="#contact">Contact</a>
+        <a href="/" className="hover:underline">Home</a>
+        <a href="/features" className="hover:underline">Features</a>
+        <a href="/forms" className="hover:underline">How It Works</a>
+        <a href="/food" className="hover:underline">Buy a meal</a>
+        <a href="/admin" className="hover:underline">Dashboard</a>
+        <a href="/contact" className="hover:underline">Contact</a>
       </nav>
       <button className="bg-yellow-400 text-green-800 px-4 py-2 rounded-full font-semibold hover:bg-yellow-500 transition-all">
         Get Started

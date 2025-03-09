@@ -6,11 +6,12 @@ const Header = () => (
     <div className="container mx-auto flex justify-between items-center py-4 px-6">
       <h1 className="text-white text-2xl font-bold">FoodGrant</h1>
       <nav className="hidden md:flex space-x-6 text-white">
-        <a href="#home" className="hover:underline">Home</a>
+        <a href="/" className="hover:underline">Home</a>
         <a href="/features" className="hover:underline">Features</a>
-        <a href="#how-it-works" className="hover:underline">How It Works</a>
-        <a href="#impact" className="hover:underline">Impact</a>
-        <a href="#contact" className="hover:underline">Contact</a>
+        <a href="/forms" className="hover:underline">How It Works</a>
+        <a href="/food" className="hover:underline">Buy a meal</a>
+        <a href="/admin" className="hover:underline">Dashboard</a>
+        <a href="/contact" className="hover:underline">Contact</a>
       </nav>
       <button className="bg-white text-green-600 px-4 py-2 rounded-full font-semibold">Get Started</button>
     </div>
@@ -23,8 +24,8 @@ const HeroSection = () => (
     <p className="text-lg md:text-xl max-w-2xl">Discover how our platform connects event organizers, NGOs, restaurants, retailers, and farmers to minimize food waste and maximize impact.</p>
     <div className="mt-6 space-x-4">
       <button className="bg-green-600 px-6 py-3 rounded-full text-white font-bold shadow-md">Join as a Donor</button>
-      <button className="bg-blue-500 px-6 py-3 rounded-full text-white font-bold shadow-md">Buy Food at Lowest Price</button>
-      <button className="bg-red-500 px-6 py-3 rounded-full text-white font-bold shadow-md">Sell Your Surplus Items</button>
+      <button className="bg-blue-500 px-6 py-3 rounded-full text-white font-bold shadow-md"><a href="/food">Buy Food at Lowest Price</a></button>
+      <button className="bg-red-500 px-6 py-3 rounded-full text-white font-bold shadow-md"><a href="/forms">Sell Your Surplus Items</a></button>
     </div>
   </section>
 );
@@ -35,13 +36,16 @@ const JoinMovement = () => (
     <p className="text-lg text-gray-700 mt-4">Be a part of the food rescue revolution!</p>
     <div className="mt-6 flex justify-center space-x-4">
       <button className="bg-green-600 px-6 py-3 flex items-center space-x-2 rounded-full text-white font-bold shadow-md hover:bg-green-700 transition-all">
-        <FaHandsHelping /> <span>Join as an NGO</span>
+        <FaHandsHelping /> <span> <a href="/forms">Join as an NGO</a></span>
       </button>
       <button className="bg-blue-500 px-6 py-3 flex items-center space-x-2 rounded-full text-white font-bold shadow-md hover:bg-blue-600 transition-all">
-        <FaBuilding /> <span>List Your Business</span>
+        <FaBuilding /> <span><a href="/forms" >List Your Business</a></span>
       </button>
       <button className="bg-yellow-500 px-6 py-3 flex items-center space-x-2 rounded-full text-white font-bold shadow-md hover:bg-yellow-600 transition-all">
-        <FaSeedling /> <span>Register as a Farmer</span>
+        <FaSeedling /> <span><a href="/forms" >Register as a Farmer</a></span>
+      </button>
+      <button className="bg-blue-500 px-6 py-3 flex items-center space-x-2 rounded-full text-white font-bold shadow-md hover:bg-blue-600 transition-all">
+        <FaSeedling /> <span><a href="/retail" >Register as a Buyer</a></span>
       </button>
     </div>
   </section>

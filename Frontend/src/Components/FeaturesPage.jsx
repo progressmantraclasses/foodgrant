@@ -8,9 +8,10 @@ const Header = () => (
       <nav className="hidden md:flex space-x-6 text-white">
         <a href="/" className="hover:underline">Home</a>
         <a href="/features" className="hover:underline">Features</a>
-        <a href="#how-it-works" className="hover:underline">How It Works</a>
-        <a href="#impact" className="hover:underline">Impact</a>
-        <a href="#contact" className="hover:underline">Contact</a>
+        <a href="/forms" className="hover:underline">How It Works</a>
+        <a href="/food" className="hover:underline">Buy a meal</a>
+        <a href="/admin" className="hover:underline">Dashboard</a>
+        <a href="/contact" className="hover:underline">Contact</a>
       </nav>
       <button className="bg-yellow-400 text-green-800 px-4 py-2 rounded-full font-semibold hover:bg-yellow-500 transition-all">Get Started</button>
     </div>
@@ -23,18 +24,19 @@ const FeaturesPage = () => (
     <section className="py-16 text-center bg-gradient-to-b from-gray-100 to-white">
       <h2 className="text-4xl font-bold text-green-800">Explore Our Features</h2>
       <div className="mt-8 flex flex-wrap justify-center space-x-4">
-        <FeatureButton icon={<FaSeedling />} text="See All Crops from Farmers" />
-        <FeatureButton icon={<FaUtensils />} text="Order Yummy Foods" />
-        <FeatureButton icon={<FaHandsHelping />} text="Find Nearby NGOs" />
+      <a href="/farmers" > <FeatureButton icon={<FaSeedling />} text="See All Crops from Farmers" /></a>
+        <a href="/food" ><FeatureButton icon={<FaUtensils />} text="Order Yummy Foods" /></a>
+        <a href="/ngo" > <FeatureButton icon={<FaHandsHelping />} text="Find Nearby NGOs" /></a>
+        <a href="/dashboard" > <FeatureButton icon={<FaHandsHelping />} text="Find Nearby Buyer's" /></a>
       </div>
     </section>
 
     <section className="py-16 bg-white text-center">
       <h2 className="text-3xl font-bold text-green-800">Our Key Features</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-6xl mx-auto">
-        <FeatureCard icon={<FaSeedling />} title="See All Crops from Farmers" description="Explore a wide variety of fresh and organic crops directly from local farmers, ensuring better quality and fair pricing." />
-        <FeatureCard icon={<FaUtensils />} title="Order Yummy Foods at Lowest Price" description="Get surplus meals from top restaurants at highly discounted rates, reducing food waste and saving money." />
-        <FeatureCard icon={<FaHandsHelping />} title="Find NGOs Near You" description="Locate and connect with NGOs working towards food distribution and hunger relief in your area." />
+      <a href="/farmers" ><FeatureCard icon={<FaSeedling />} title="See All Crops from Farmers" description="Explore a wide variety of fresh and organic crops directly from local farmers, ensuring better quality and fair pricing." /></a>
+      <a href="/food" > <FeatureCard icon={<FaUtensils />} title="Order Yummy Foods at Lowest Price" description="Get surplus meals from top restaurants at highly discounted rates, reducing food waste and saving money." /></a>
+      <a href="/ngo" > <FeatureCard icon={<FaHandsHelping />} title="Find NGOs Near You" description="Locate and connect with NGOs working towards food distribution and hunger relief in your area." /></a>
       </div>
     </section>
 
@@ -42,9 +44,10 @@ const FeaturesPage = () => (
       <h2 className="text-4xl font-bold text-green-800">Join the Movement</h2>
       <p className="text-lg text-gray-700 mt-4">Be a part of the food rescue revolution!</p>
       <div className="mt-6 flex flex-wrap justify-center space-x-4">
-        <FeatureButton icon={<FaHandsHelping />} text="Join as an NGO" />
-        <FeatureButton icon={<FaBuilding />} text="List Your Business" />
-        <FeatureButton icon={<FaSeedling />} text="Register as a Farmer" />
+      <a href="/forms" > <FeatureButton icon={<FaHandsHelping />} text="Join as an NGO" /></a>
+      <a href="/forms" ><FeatureButton icon={<FaBuilding />} text="List Your Business" /></a>
+      <a href="/farmers" > <FeatureButton icon={<FaSeedling />} text="Register as a Farmer" /></a>
+      <a href="/retail" > <FeatureButton icon={<FaSeedling />} text="Register as a Buyer" /></a>
       </div>
     </section>
 
